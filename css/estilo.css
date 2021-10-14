@@ -419,6 +419,11 @@ header label{
         margin: 2rem 0;
         font-size: 2rem;
     }
+    header .navbar .spectre{
+        display: block;
+        margin: 2rem 0;
+        font-size: 2rem;
+    }
     header input:checked ~ .navbar{
         transform: scaleY(1);
         opacity: 1;
