@@ -152,11 +152,12 @@ nav:hover .shrink-btn{
 .contenedor{
     color: white;
     margin-left: 5px;
-    width: 30px;
+    width: 70px;
 }
 .contenedor p{
     font-size: 16px;
     font-weight: bold;
+    margin-bottom: 5px;
 }
 .contenedor .rango{
     font-size: 12px;
@@ -234,6 +235,9 @@ nav:hover .shrink-btn{
     transition: all 100ms ease-in-out;
     font-size: 24px;
     color: white;
+}
+.fa-globe{
+    color: green;
 }
 .salir span{
     transition: all 100ms ease-in-out;
