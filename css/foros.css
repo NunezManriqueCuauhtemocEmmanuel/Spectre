@@ -28,6 +28,7 @@ body{
     display: flex;
 }
 header{
+    text-align: center;
     position: fixed;
     top:0; left:0;
     width: 100%;
@@ -162,6 +163,7 @@ nav:hover .shrink-btn{
     cursor: pointer;
 }
 .direccion .links:hover{
+    color: rgb(255, 211, 116);
     padding-left: 20px;
 }
 .direccion .links div{
@@ -177,6 +179,7 @@ nav:hover .shrink-btn{
 .salir{
     margin-top: 50px;
     margin-left: 30px;
+    transition: all 100ms ease-in-out;
 }
 .chat{
     width: 40rem;
@@ -196,24 +199,38 @@ nav:hover .shrink-btn{
 }
 .fa-home{
     font-size: 24px;
+    transition: all 100ms ease-in-out;
 }
 .fa-comments{
     font-size: 24px;
+    transition: all 100ms ease-in-out;
 }
 .fa-project-diagram{
     font-size: 24px;
+    transition: all 100ms ease-in-out;
 }
 .fa-poll-h{
     font-size: 24px;
+    transition: all 100ms ease-in-out;
 }
 .fa-user-graduate{
     font-size: 24px;
+    transition: all 100ms ease-in-out;
 }
 .fa-door-closed{
+    transition: all 100ms ease-in-out;
     font-size: 24px;
     color: white;
 }
 .salir span{
+    transition: all 100ms ease-in-out;
     padding: 10px;
     color: white;
+}
+.salir:hover{
+    color: red;
+    padding-top: 10px;
+}
+.salir .fa-door-closed:hover{
+    color: red;
 }
