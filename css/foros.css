@@ -109,14 +109,15 @@ main{
     position: absolute;
     top: 50%;
     height: 27px;
-    padding: 2px 0.3rem;
+    width: 50px;
+    padding: 5px;
     background-color: var(--main-color);
     transform: translateY(-50%) translateX(-8px);
     border-radius: 20px;
     opacity: 0;
     pointer-events: none;
     text-align: center;
-    right: -2.65rem;
+    right: -3.75rem;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -154,9 +155,20 @@ nav:hover .shrink-btn{
 }
 .direccion .links{
     width: 70px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    margin-top: 35px;
+    margin-bottom: 35px;
     margin-left: 15px;
+    transition: all 100ms ease-in-out;
+    cursor: pointer;
+}
+.direccion .links:hover{
+    padding-left: 20px;
+}
+.direccion .links div{
+    width: 300px;
+}
+.direccion .links div span{
+    padding-left: 10px;
 }
 .direccion h2{
     margin-top: 30px;
@@ -177,4 +189,31 @@ nav:hover .shrink-btn{
     min-height: 100vh;
     width: 20rem;
     text-align: center;
+}
+.elementos img{
+    margin-top: 35px;
+    margin-right: 10px;
+}
+.fa-home{
+    font-size: 24px;
+}
+.fa-comments{
+    font-size: 24px;
+}
+.fa-project-diagram{
+    font-size: 24px;
+}
+.fa-poll-h{
+    font-size: 24px;
+}
+.fa-user-graduate{
+    font-size: 24px;
+}
+.fa-door-closed{
+    font-size: 24px;
+    color: white;
+}
+.salir span{
+    padding: 10px;
+    color: white;
 }
