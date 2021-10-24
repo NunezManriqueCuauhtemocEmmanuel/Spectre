@@ -105,6 +105,11 @@ main{
     color: white;
     text-align: center;
     font-size: 2em;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+.rango{
+    font-size: 1em;
 }
 .shrink-btn{
     position: absolute;
@@ -134,6 +139,7 @@ nav:hover .shrink-btn{
 }
 .perfil img{
     margin: 5px;
+    margin-left: 15px;
     border-radius: 100px;
     border: solid black 2px;
 }
@@ -147,6 +153,13 @@ nav:hover .shrink-btn{
     color: white;
     margin-left: 5px;
     width: 30px;
+}
+.contenedor p{
+    font-size: 16px;
+    font-weight: bold;
+}
+.contenedor .rango{
+    font-size: 12px;
 }
 .direccion{
     margin-top: 20px;
