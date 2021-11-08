@@ -181,15 +181,6 @@ header h3{
     left: 35%;
     animation: flotar 5s ease-in-out infinite;
 }
-.effect-2{
-    width: 150px; 
-    height: 100px; 
-    border: 10px solid #0866b8;
-    border-radius: 100px;
-    top: 30%;
-    left: 35%;
-    animation: flotar 5s ease-in-out infinite;
-}
 .effect-3{
     width: 350px;
     height: 350px;
@@ -252,11 +243,17 @@ header h3{
 
 /* media querys */
 
-@media (max-width:991px){
-    /* header{
+@media (max-width:800px){
+    header{
         left: -110%;
     }
+    header.active{
+        left: 0%;
+    }
     #menu-btn{
-        display: block;
-    } */
+        display: initial;
+    }
+    .effect-3{
+        display: none;
+    }
 }
