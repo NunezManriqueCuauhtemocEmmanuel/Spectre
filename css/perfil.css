@@ -216,3 +216,18 @@ header h3{
     color: green;
     animation: pulso 5000ms infinite;
 }
+
+@media (max-width:800px){
+    header{
+        left: -110%;
+    }
+    header.active{
+        left: 0%;
+    }
+    #menu-btn{
+        display: initial;
+    }
+    .effect-3{
+        display: none;
+    }
+}
