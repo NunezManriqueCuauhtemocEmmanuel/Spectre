@@ -1,5 +1,7 @@
 :root{
-    --bg-color: #fff9f3;
+    --bg-color: #0f1422;
+    --switchers-main: #192238;
+    --white: #FFF;
 }
 
 *{
@@ -52,7 +54,6 @@ header h3{
     width: 100%;
     display: flex;
     align-items: center;
-    
     margin-top: 20px;
 }
 .perfil img{
@@ -112,6 +113,43 @@ header h3{
     margin-left: 15px;
     font-size: 2rem;
 }
+.configuracion{
+    position: fixed;
+    width: 300px;
+    top: 10px; right: -110rem;
+    background: #070a11;
+    z-index: 7;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 120px 0 0 120px;
+    display: none;
+    transition: all 2s linear;
+}
+.configuracion .light-dark,
+.configuracion .color-icon .icons{
+    height: 50px;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background: var(--switchers-main);
+    color: var(--white);
+    line-height: 50px;
+    margin: 0 10px;
+    border-radius: 50%;
+    font-size:14px;
+}
+.configuracion.active{
+    right: 0;
+    display: flex;
+    transition: all 2s linear;
+}
+.configuracion .light-dark,
+.configuracion .color-icon .icons:hover{
+    background: #2a3555;
+}
 #menu-btn{
     position: fixed;
     top: 1rem; left: 2rem;
@@ -123,12 +161,30 @@ header h3{
     font-size: 2rem;
     cursor: pointer;
     text-align: center;
-    background: #192238;
+    background: #232d46;
     color: white;
     display: none;
 }
 #menu-btn:hover{
     background: #2a3555;
+}
+#menu-conf{
+    position: fixed;
+    top: 20px; right: 2rem;
+    z-index: 9;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    cursor: pointer;
+    text-align: center;
+    background: #232d46;
+    color: white;
+}
+#menu-conf:hover{
+    background: #2a3555;
+    animation: spin 1s linear infinite;
 }
 .fa-home{
     font-size: 24px;

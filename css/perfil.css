@@ -1,33 +1,37 @@
+:root{
+    --bg-color: #fff9f3;
+    --switchers-main: #192238;
+    --white: #FFF;
+}
+
 *{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     margin: 0; padding: 0;
     box-sizing: border-box;
     outline: none; border: none;
     text-decoration: none;
+    text-transform: capitalize;
     transition: all.2s linear;
     line-height: 1.5;
 }
-:root{
-    --main-color: rgb(226, 122, 36);
-    --main-color-dark: rgb(17, 48, 94);
-    --main-color-light: rgb(110, 155, 223);
-    --text-color: #cfcfcf;
-    --ul: url(../img/fondoForo2.svg);
-}
 html{
-    /* background: url(../img/fondoForo2.svg); */
-    background-repeat: no-repeat;
-    background-size: 100vw 100vh;
-    background-attachment: fixed;
+    background: var(--bg-color);
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
-
 body{
-    top: 0;
-    background: url(../img/fondoForo2.svg);
+    min-height: 100vh;
+    width: 100vw;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: cover;
+    background-size: 100%
 }
+/* #fff9f3 */
+/* #0f1422 */
+
+/* barra de navegacion */
+
 
 header{
     width: 275px;
@@ -39,7 +43,6 @@ header{
     flex-flow: column;
     min-height: 100vh;
 }
-
 header h3{
     font-size: 3rem;
     color: #dfdfdf;
@@ -51,6 +54,7 @@ header h3{
     width: 100%;
     display: flex;
     align-items: center;
+    
     margin-top: 20px;
 }
 .perfil img{
@@ -110,6 +114,43 @@ header h3{
     margin-left: 15px;
     font-size: 2rem;
 }
+.configuracion{
+    position: fixed;
+    width: 300px;
+    top: 10px; right: -110rem;
+    background: #070a11;
+    z-index: 7;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 120px 0 0 120px;
+    display: none;
+    transition: all 2s linear;
+}
+.configuracion .light-dark,
+.configuracion .color-icon .icons{
+    height: 50px;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background: var(--switchers-main);
+    color: var(--white);
+    line-height: 50px;
+    margin: 0 10px;
+    border-radius: 50%;
+    font-size:14px;
+}
+.configuracion.active{
+    right: 0;
+    display: flex;
+    transition: all 2s linear;
+}
+.configuracion .light-dark,
+.configuracion .color-icon .icons:hover{
+    background: #2a3555;
+}
 #menu-btn{
     position: fixed;
     top: 1rem; left: 2rem;
@@ -127,6 +168,24 @@ header h3{
 }
 #menu-btn:hover{
     background: #2a3555;
+}
+#menu-conf{
+    position: fixed;
+    top: 20px; right: 2rem;
+    z-index: 9;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    border-radius: 50%;
+    font-size: 2rem;
+    cursor: pointer;
+    text-align: center;
+    background: #232d46;
+    color: white;
+}
+#menu-conf:hover{
+    background: #2a3555;
+    animation: spin 1s linear infinite;
 }
 .fa-home{
     font-size: 24px;
@@ -156,19 +215,4 @@ header h3{
 .fa-globe{
     color: green;
     animation: pulso 5000ms infinite;
-}
-
-@media (max-width:800px){
-    header{
-        left: -110%;
-    }
-    header.active{
-        left: 0%;
-    }
-    #menu-btn{
-        display: initial;
-    }
-    .effect-3{
-        display: none;
-    }
 }
