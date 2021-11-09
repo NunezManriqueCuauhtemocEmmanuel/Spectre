@@ -92,8 +92,8 @@ header h3{
 }
 .direccion .links{
     width: 70px;
-    margin-top: 35px;
-    margin-bottom: 35px;
+    margin-top: 40px;
+    margin-bottom: 25px;
     margin-left: 15px;
     transition: all 100ms ease-in-out;
     cursor: pointer;
@@ -238,6 +238,7 @@ header h3{
     header h3{
         font-size: 4rem;
         text-align: center;
+        margin-top: 20px;
     }
     .perfil{
         display: flex;
@@ -257,5 +258,11 @@ header h3{
         font-size: 24px;
         font-weight: bold;
         margin-bottom: 5px;
+    }
+    .direccion{
+        margin-top: 10px;
+    }
+    .direccion .links{
+        margin-top: 10px;
     }
 }

@@ -1,6 +1,7 @@
 :root{
     --bg-color: #0f1422;
     --switchers-main: #192238;
+    --menus: #070a11;
     --white: #FFF;
 }
 
@@ -15,7 +16,6 @@
     line-height: 1.5;
 }
 html{
-    background: var(--bg-color);
     font-size: 62.5%;
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -37,7 +37,7 @@ header{
     width: 275px;
     position: fixed;
     top: 0; left: 0; bottom: 0;
-    background: #070a11;
+    background: var(--menus);
     display: flex;
     z-index: 10;
     flex-flow: column;
@@ -116,7 +116,7 @@ header h3{
     position: fixed;
     width: 300px;
     top: 10px; right: -110rem;
-    background: #070a11;
+    background: var(--menus);
     z-index: 7;
     justify-content: center;
     display: flex;
@@ -151,7 +151,7 @@ header h3{
 }
 #menu-btn{
     position: fixed;
-    top: 1rem; left: 2rem;
+    top: 2rem; left: 2rem;
     z-index: 11;
     height: 5rem;
     width: 5rem;
@@ -184,6 +184,60 @@ header h3{
 #menu-conf:hover{
     background: #2a3555;
     animation: spin 1s linear infinite;
+}
+.color-icon{
+    position: relative;
+}
+.color-box{
+    position: absolute;
+    top: 65px;
+    right: -560px;
+    min-height: 60px;
+    background: var(--menus);
+    padding: 16px 20px 20px 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+.color-box.active{
+    right: -60px;
+}
+.color-box h3{
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+    color: #FFF;
+}
+.color-switchers{
+    display: flex;
+}
+.color-box .color-switchers .btn{
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    background: var(--switchers-main);
+    margin: 3px 3px;
+}
+.color-switchers .btn.active{
+    box-shadow: 0 0 0 2px var(--menus),
+                0 0 0 4px var(--switchers-main);
+}
+.color-switchers .btn.orange{
+    background: #a54e07;
+}
+.color-switchers .btn.red{
+    background: #610b0b;
+}
+.color-switchers .btn.purple{
+    background: #2a0e6d;
+}
+.color-switchers .btn.green{
+    background: #0b6112;
 }
 .fa-home{
     font-size: 24px;
