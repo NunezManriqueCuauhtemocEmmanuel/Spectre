@@ -137,17 +137,13 @@ header h3{
     line-height: 50px;
     margin: 0 10px;
     border-radius: 50%;
-    font-size:14px;
+    font-size:20px;
     cursor: pointer;
 }
 .configuracion.active{
     right: 0;
     display: flex;
     transition: 2s linear;
-}
-.configuracion .light-dark:hover,
-.configuracion .color-icon .icons:hover{
-    opacity: 1;
 }
 #menu-btn{
     position: fixed;
@@ -222,22 +218,45 @@ header h3{
     border-radius: 50%;
     background: var(--switchers-main);
     margin: 3px 3px;
+    cursor: pointer;
 }
-.color-switchers .btn.active{
+.color-switchers .btn.green{
+    background: #0b660b;
+}
+.color-switchers .btn.green.active{
     box-shadow: 0 0 0 2px var(--menus),
-                0 0 0 4px var(--switchers-main);
+                0 0 0 4px #0b660b;
+}
+.color-switchers .btn.pink{
+    background: #ab34c9;
+}
+.color-switchers .btn.pink.active{
+    box-shadow: 0 0 0 2px var(--menus),
+                0 0 0 4px #ab34c9;
 }
 .color-switchers .btn.orange{
-    background: #a54e07;
+    background: rgb(161, 90, 8);
 }
 .color-switchers .btn.red{
     background: #610b0b;
 }
-.color-switchers .btn.purple{
-    background: #2a0e6d;
+.color-switchers .btn.red.active{
+    box-shadow: 0 0 0 2px var(--menus),
+                0 0 0 4px #610b0b;
 }
-.color-switchers .btn.green{
-    background: #0b6112;
+.color-switchers .btn.purple{
+    background: #3e1a92;
+}
+.color-switchers .btn.purple.active{
+    box-shadow: 0 0 0 2px var(--menus),
+                0 0 0 4px #3e1a92;
+}
+.color-switchers .btn.blue{
+    background: #0d65ad;
+}
+.color-switchers .btn.blue.active{
+    box-shadow: 0 0 0 2px var(--menus),
+                0 0 0 4px #0d65ad;
 }
 .fa-home{
     font-size: 24px;
