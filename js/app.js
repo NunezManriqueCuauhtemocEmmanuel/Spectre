@@ -4,8 +4,6 @@ let conf = document.querySelector('#menu-conf');
 let configuracion = document.querySelector('.configuracion');
 let icons = document.querySelector('.icons');
 let box = document.querySelector('.color-box');
-let tonoO = document.querySelector('.light-dark')
-let tiempo = document.querySelector('#light-dark');
 let buttons = document.querySelectorAll('.btn')
 
 menu.onclick = ()=>{
@@ -17,9 +15,6 @@ conf.onclick = ()=>{
 }
 icons.onclick = () =>{
     box.classList.toggle('open');
-}
-tonoO.onclick= () =>{
-    tiempo.classList.toggle('fa-sun');
 }
 
 for (var button of buttons) {
@@ -44,7 +39,15 @@ for (var button of buttons) {
         root.style.setProperty("--light-bg", color[4]);
         root.style.setProperty("--hover-color", color[5]);
 
-        console.log(dataColor)
+        let iconName = target.className.split(" ")[2];
 
+        if(target.classList.contains("fa-moon")){
+            target.classList.replace(iconName , "fa-sun");
+            icons.style.display = "none";
+        }else if(target.classList.contains("fa-sun")){
+            target.classList.replace("fa-sun" , "fa-moon")
+            document.querySelector(".btn.base").click();
+            icons.style.display = "flex";
+        }
     })
 }

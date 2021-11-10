@@ -129,7 +129,8 @@ header h3{
     display: none;
     transition: .2s linear;
 }
-.configuracion .light-dark,
+.configuracion .fa-moon,
+.configuracion .fa-sun,
 .configuracion .color-icon .icons{
     height: 50px;
     width: 50px;
