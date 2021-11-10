@@ -1,7 +1,10 @@
 :root{
-    --bg-color: #fff9f3;
-    --switchers-main: #192238;
     --white: #FFF;
+    --black: #24292d;
+    --menus: #070a11;
+    --switchers-main: #192238;
+    --light-bg: #dde0e7;
+    --hover-color: #407cff;
 }
 
 *{
@@ -15,10 +18,10 @@
     line-height: 1.5;
 }
 html{
-    background: var(--bg-color);
     font-size: 62.5%;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    background: var(--light-bg);
 }
 body{
     min-height: 100vh;
@@ -37,7 +40,7 @@ header{
     width: 275px;
     position: fixed;
     top: 0; left: 0; bottom: 0;
-    background: #070a11;
+    background: var(--menus);
     display: flex;
     z-index: 10;
     flex-flow: column;
@@ -54,7 +57,6 @@ header h3{
     width: 100%;
     display: flex;
     align-items: center;
-    
     margin-top: 20px;
 }
 .perfil img{
@@ -78,7 +80,7 @@ header h3{
 }
 .direccion{
     margin-top: 50px;
-    background: #192238;
+    background: var(--switchers-main);
     padding: 15px;
     width: 100%;
     color: rgb(255, 255, 255);
@@ -88,7 +90,7 @@ header h3{
     font-size: 1.8rem;
 }
 .direccion .links div .as:hover{
-    color: rgb(64, 124, 255);
+    color: var(--hover-color);
 }
 .direccion .links{
     width: 70px;
@@ -99,7 +101,7 @@ header h3{
     cursor: pointer;
 }
 .direccion .links:hover{
-    color: rgb(64, 124, 255);;
+    color: var(--hover-color);
     padding-left: 10px;
 }
 .direccion .links div{
@@ -110,7 +112,6 @@ header h3{
     font-size: 1.8rem;
 }
 .direccion h2{
-    margin-top: 20px;
     margin-left: 15px;
     font-size: 2rem;
 }
@@ -118,7 +119,7 @@ header h3{
     position: fixed;
     width: 300px;
     top: 10px; right: -110rem;
-    background: #070a11;
+    background: var(--menus);
     z-index: 7;
     justify-content: center;
     display: flex;
@@ -126,7 +127,7 @@ header h3{
     padding: 10px;
     border-radius: 120px 0 0 120px;
     display: none;
-    transition: all 2s linear;
+    transition: .2s linear;
 }
 .configuracion .light-dark,
 .configuracion .color-icon .icons{
@@ -140,20 +141,16 @@ header h3{
     line-height: 50px;
     margin: 0 10px;
     border-radius: 50%;
-    font-size:14px;
+    font-size:20px;
+    cursor: pointer;
 }
-.configuracion.active{
+.configuracion.abierto{
     right: 0;
     display: flex;
-    transition: all 2s linear;
-}
-.configuracion .light-dark,
-.configuracion .color-icon .icons:hover{
-    background: #2a3555;
 }
 #menu-btn{
     position: fixed;
-    top: 1rem; left: 2rem;
+    top: 2rem; left: 2rem;
     z-index: 11;
     height: 5rem;
     width: 5rem;
@@ -162,13 +159,11 @@ header h3{
     font-size: 2rem;
     cursor: pointer;
     text-align: center;
-    background: #192238;
+    background: var(--switchers-main);
     color: white;
     display: none;
 }
-#menu-btn:hover{
-    background: #2a3555;
-}
+
 #menu-conf{
     position: fixed;
     top: 20px; right: 2rem;
@@ -180,12 +175,99 @@ header h3{
     font-size: 2rem;
     cursor: pointer;
     text-align: center;
-    background: #232d46;
+    background: var(--switchers-main);
     color: white;
 }
 #menu-conf:hover{
-    background: #2a3555;
     animation: spin 1s linear infinite;
+}
+.color-icon{
+    position: relative;
+}
+.color-box{
+    position: absolute;
+    top: 65px;
+    right: -560px;
+    min-height: 60px;
+    background: var(--menus);
+    padding: 16px 20px 20px 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+}
+.color-box.open{
+    right: -75px;
+}
+.color-box h3{
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 16px;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+    color: #FFF;
+}
+.color-switchers{
+    display: flex;
+}
+.color-box .color-switchers .btn{
+    display: inline-block;
+    height: 27px;
+    width: 27px;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    background: var(--switchers-main);
+    margin: 3px 3px;
+    cursor: pointer;
+}
+.color-switchers .btn.base{
+    background: #29375a;
+}
+.color-switchers .btn.base.active{
+    box-shadow: 0 0 0 2px var(--menus),
+                0 0 0 4px #29375a;
+}
+.color-switchers .btn.green{
+    background: #0a7e0a;
+}
+.color-switchers .btn.green.active{
+    box-shadow: 0 0 0 2px var(--menus),
+                0 0 0 4px #0a7e0a;
+}
+.color-switchers .btn.pink{
+    background: #ab34c9;
+}
+.color-switchers .btn.pink.active{
+    box-shadow: 0 0 0 2px var(--menus),
+                0 0 0 4px #ab34c9;
+}
+.color-switchers .btn.orange{
+    background: rgb(209, 120, 18);
+}
+.color-switchers .btn.orange.active{
+    box-shadow: 0 0 0 2px var(--menus),
+                0 0 0 4px rgb(209, 120, 18);
+}
+.color-switchers .btn.red{
+    background: #971111;
+}
+.color-switchers .btn.red.active{
+    box-shadow: 0 0 0 2px var(--menus),
+                0 0 0 4px #971111;
+}
+.color-switchers .btn.purple{
+    background: #501dc7;
+}
+.color-switchers .btn.purple.active{
+    box-shadow: 0 0 0 2px var(--menus),
+                0 0 0 4px #501dc7;
+}
+.color-switchers .btn.blue{
+    background: #0d65ad;
+}
+.color-switchers .btn.blue.active{
+    box-shadow: 0 0 0 2px var(--menus),
+                0 0 0 4px #0d65ad;
 }
 .fa-home{
     font-size: 24px;
@@ -216,12 +298,32 @@ header h3{
     color: green;
     animation: pulso 5000ms infinite;
 }
+/* animaciones */
+
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes flotar{
+    0%,100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(25px);
+    }
+}
+
+/* media querys */
 
 @media (max-width:800px){
     header{
         left: -110%;
     }
-    header.active{
+    header.abierto{
         left: 0%;
     }
     #menu-btn{

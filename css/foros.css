@@ -8,7 +8,7 @@
     text-transform: capitalize;
 }
 :root{
-    --main-color: rgb(226, 122, 36);
+    --main-color: #e27a24;
     --main-color-dark: rgb(17, 48, 94);
     --main-color-light: rgb(110, 155, 223);
     --text-color: #cfcfcf;
