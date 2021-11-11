@@ -115,6 +115,22 @@ header h3{
     margin-left: 15px;
     font-size: 2rem;
 }
+.salida{
+    margin-top: 15px;
+    padding-left: 25px;
+    width: 100%;
+    color: rgb(255, 255, 255);
+}
+.exit span{
+    padding-left: 10px;
+    font-size: 1.8rem;
+    font-weight: normal;
+}
+.exit:hover,
+.exit span:hover{
+    padding-left: 10px;
+    color: var(--hover-color);
+}
 .configuracion{
     position: fixed;
     width: 300px;
@@ -148,6 +164,9 @@ header h3{
 .configuracion.abierto{
     right: 0;
     display: flex;
+}
+.fa-sun{
+    animation: spin 10s linear infinite;
 }
 #menu-btn{
     position: fixed;
@@ -297,7 +316,6 @@ header h3{
 }
 .fa-globe{
     color: green;
-    animation: pulso 5000ms infinite;
 }
 /* animaciones */
 

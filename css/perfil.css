@@ -115,6 +115,22 @@ header h3{
     margin-left: 15px;
     font-size: 2rem;
 }
+.salida{
+    margin-top: 15px;
+    padding-left: 25px;
+    width: 100%;
+    color: rgb(255, 255, 255);
+}
+.exit span{
+    padding-left: 10px;
+    font-size: 1.8rem;
+    font-weight: normal;
+}
+.exit:hover,
+.exit span:hover{
+    padding-left: 10px;
+    color: var(--hover-color);
+}
 .configuracion{
     position: fixed;
     width: 300px;
