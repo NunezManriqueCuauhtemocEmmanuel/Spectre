@@ -168,6 +168,9 @@ header h3{
 .fa-sun{
     animation: spin 10s linear infinite;
 }
+.st0{
+    background: black;
+}
 #menu-btn{
     position: fixed;
     top: 2rem; left: 2rem;
@@ -332,8 +335,8 @@ header h3{
     z-index: -1;
 }
 .effect-1{
-    width: 530px;
-    height: 600px;
+    width: 42%;
+    height: 65%;
     right: -20%;
     top: 20%;
     border-radius: 100%;
@@ -341,32 +344,32 @@ header h3{
     box-shadow: 0 0 20px 4px var(--black);
 }
 .effect-2{
-    width: 200px;
-    height: 300px;
+    width: 15.4%;
+    height: 33%;
     top: 37%;
-    right: 5.6%;
+    right: 5.9%;
     border-radius: 100%;
     background: #FFF;
 }
 .effect-3{
-    width: 100px;
-    height: 165px;
+    width: 7%;
+    height: 15%;
     top: 45%;
     right: 13.4%;
     border-radius: 100%;
     background: rgb(0, 0, 0);
 }
 .effect-4{
-    width: 20px;
-    height: 30px;
+    width: 1.5%;
+    height: 3.3%;
     top: 47%;
     right: 18%;
     border-radius: 100%;
     background: rgb(255, 255, 255);
 }
 .effect-5{
-    width: 405px;
-    height: 100px;
+    width: 33%;
+    height: 12%;
     top: 17%;
     right: -10%;
     border-radius: 100%;
@@ -393,6 +396,55 @@ header h3{
 }
 
 /* media querys */
+@media(max-width:1190px){
+    .effect-1{
+        width: 42%;
+        height: 65%;
+        right: -620%;
+        top: 20%;
+        border-radius: 100%;
+        background-image: linear-gradient(to left, rgb(70, 70, 70),var(--menus));
+        box-shadow: 0 0 20px 4px var(--black);
+        display: none;
+    }
+    .effect-2{
+        width: 15.4%;
+        height: 33%;
+        top: 37%;
+        right: -665.9%;
+        border-radius: 100%;
+        background: #FFF;
+        display: none;
+    }
+    .effect-3{
+        width: 7%;
+        height: 15%;
+        top: 45%;
+        right: -6613.4%;
+        border-radius: 100%;
+        background: rgb(0, 0, 0);
+        display: none;
+    }
+    .effect-4{
+        width: 1.5%;
+        height: 3.3%;
+        top: 47%;
+        right: -618%;
+        border-radius: 100%;
+        background: rgb(255, 255, 255);
+        display: none;
+    }
+    .effect-5{
+        width: 33%;
+        height: 12%;
+        top: 17%;
+        right: -610%;
+        border-radius: 100%;
+        background-image: linear-gradient(to top,rgb(148, 148, 148), rgb(151, 151, 151));
+        transform: rotate(350deg);
+        display: none;
+    }
+}
 
 @media (max-width:800px){
     header{
